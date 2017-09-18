@@ -27,6 +27,8 @@ eg. ```[1,2,3,5] !! 3``` returns 5.
 
 ## Head, tail
 
+- Head and tail of empty list is an exception 
+
 ```
 head :: [a] -> a 
 head [1,2,3]
