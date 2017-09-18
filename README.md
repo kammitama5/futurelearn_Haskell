@@ -1,3 +1,12 @@
+## Terms
+
+- synctactic sugar 
+- Church-Rosser theorem
+- Reduction
+
+- Concatenating an empty list is a no-op conceptually
+  - eg. ```[]++xs == xs++[]``` evaluates to ```True```
+
 # futurelearn_Haskell
 Exercises from Future Learn's Haskell Course
 
