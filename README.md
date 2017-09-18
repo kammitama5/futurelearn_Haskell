@@ -19,3 +19,18 @@ Exercises from Future Learn's Haskell Course
 
 - ```[5*x | x <- [1..5]]``` gives ```[5, 10..25]```
 
+## Indexing list
+
+Use ```!!!```
+eg. ```[1,2,3,5] !! 3``` returns 5.
+
+
+## Head, tail
+
+```
+head :: [a] -> a 
+head [1,2,3]
+```
+- returns 1 (translate: from a list, return first element)
+- tail returns other elements that are not head
+
