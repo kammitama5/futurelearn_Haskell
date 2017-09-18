@@ -55,3 +55,10 @@ sumprod = \ x y -> [x+y,x*y]
 input 
 sumprod 3 8 returns [11, 24]
 ```
+
+## Append
+
+```
+23 : [48, 41, 44]
+returns [23, 48, 41, 44]
+```
