@@ -44,3 +44,14 @@ add3nums x y z = x + y + z
 (\x -> x + 1) 4
 ```
 - gives 5 because 4 + 1 = 5
+
+## This is just beautiful!
+
+- this function returns the sum and product in a list
+
+```
+definition
+sumprod = \ x y -> [x+y,x*y] 
+input 
+sumprod 3 8 returns [11, 24]
+```
