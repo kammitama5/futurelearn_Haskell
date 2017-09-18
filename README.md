@@ -1,3 +1,5 @@
+Find the course [here](https://www.futurelearn.com/courses/functional-programming-haskell/)
+
 ## Terms
 
 - synctactic sugar 
