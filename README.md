@@ -34,3 +34,8 @@ head [1,2,3]
 - returns 1 (translate: from a list, return first element)
 - tail returns other elements that are not head
 
+```
+add3nums x y z = x + y + z 
+10 + 4* add3nums 1 2 3
+```
+- gives 34 because (1+2+3=6 -> x 4 = 24 + 10 = 34)
