@@ -39,3 +39,8 @@ add3nums x y z = x + y + z
 10 + 4* add3nums 1 2 3
 ```
 - gives 34 because (1+2+3=6 -> x 4 = 24 + 10 = 34)
+
+```
+(\x -> x + 1) 4
+```
+- gives 5 because 4 + 1 = 5
