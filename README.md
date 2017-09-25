@@ -84,3 +84,10 @@ returns [23, 48, 41, 44]
 ## Is in List (elem)
 
 ``` `elem` ```
+
+## Zip (Interleave?)
+
+```
+zip [1,3,5] [2,4,6]
+gives [(1,2),(3,4),(5,6)]
+```
