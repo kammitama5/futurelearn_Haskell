@@ -105,6 +105,8 @@ gives [(1,1,1), (2,2,2), (3,3,3)]
 
 ## IO Monad
 
+- sequencing is vital for IO
+
 ```
 output -> putStrLn
 ```
