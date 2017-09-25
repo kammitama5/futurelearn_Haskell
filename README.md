@@ -75,3 +75,9 @@ sumprod 3 8 returns [11, 24]
 23 : [48, 41, 44]
 returns [23, 48, 41, 44]
 ```
+
+## Boolean
+
+```
+\= is not equal
+```
