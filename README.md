@@ -81,6 +81,12 @@ returns [23, 48, 41, 44]
 ```
 \= is not equal
 ```
+
+```
+[(x,y) | x<-[False, True], y<-[False, True]]
+gives [(False,False),(False,True),(True,False),(True,True)]
+```
+
 ## Is in List (elem)
 
 ``` `elem` ```
