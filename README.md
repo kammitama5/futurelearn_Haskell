@@ -81,3 +81,6 @@ returns [23, 48, 41, 44]
 ```
 \= is not equal
 ```
+## Is in List (elem)
+
+``` `elem` ```
