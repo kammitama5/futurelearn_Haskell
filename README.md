@@ -103,3 +103,20 @@ zip3 [1,2,3] [1,2,3] [1,2,3]
 gives [(1,1,1), (2,2,2), (3,3,3)]
 ```
 
+## IO Monad
+
+```
+output -> putStrLn
+```
+
+```
+input -> getLine
+```
+
+- ask user for input and return output
+
+```
+do { putStrLn "what is your name?"; x <- getLine; putStrLn ("hello " ++ x) }
+```
+
+
