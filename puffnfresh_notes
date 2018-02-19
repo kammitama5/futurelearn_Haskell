@@ -1,0 +1,155 @@
+Brian notes 2/18
+
+exponential -> invariant map 
+invmap :: (a -> b) (b -> a) -> 1 
+
+(=<<) :: (a -> f b) -> fa ->  f b
+
+cobind :: (f a -> b) -> f a -> f b (called extend)
+Comonad 
+
+<**>)::
+Monad f =>
+f (a -> b)
+-> f a 
+-> f b 
+(<**>) fab fa = 
+fab >>= (<$> fa)
+
+List a  return a list bs 
+instance Monad List where 
+
+flatmap is bind (Scala vs Haskell)
+selectmay in C#
+
+arrow is type instructor 
+
+:kind(->)
+
+
+type instructors take one type 
+
+Reader Monad (uses variable more than once )
+
+((*) =<< +(10)) 7 
+119 (17 * 7)
+
+(if giving you Monad, you have to use bind in some way)
+
+Dante for Emacs -> Haskell (don't use Inferno)
+
+Kleisli 
+Monad f => 
+(b -> f c)
+-> (a -> f b)
+-> a 
+-> f c 
+(<=<) = 
+
+Kleisli is reader t 
+
+Given a single arg for a file name...
+read that file and print out name and context 
+a.txt
+b.txt
+c.txt
+
+chain together a list of functions in stages
+
+:Main (to run)
+
+getArgs :: IO (List Chars)
+
+IO can use fMap, Apply, Bind implementation 
+
+Chars is a List of Chars 
+so IO is a List of Lists 
+
+getFiles :: 
+	List FilePath 
+	-> IO (List FilePath)
+	
+	
+getFile::
+	FilePath 
+	-> IO (FilePath, Chars)
+getFile fp = 
+	(\c -> (fp, c )) = readFile fp 
+	in todo
+	
+sequence -> gives IO of list of something 
+
+printFiles xs = 
+	(\t -> y) printFile <$> xs
+
+
+PrintFile
+
+
+can use do notation vs bind 
+removes syntactic nesting in programme 
+(readable differences)
+
+Compose :
+create datatype Compose 
+takes f and g and type 
+
+newtype Compose f g a = 
+	Compose (f (g a))
+	
+	
+Monad's Superclass is Applicative, and Applicative's Superclass is Functor
+Monads don't compose 
+
+Monad Transformers 
+
+instance Monad(Compose List Optional) where 
+(=<<) ::
+(a -> Compose List Optional b)
+-> Compose List Optional a 
+-> Compose List Optional b 
+(=<<) f (Compose fga) = 
+error "impossible"
+
+class Functor t => Traversable t where 
+traverse::
+Applicative f => 
+(a -> f b)
+-> t a 
+-> f (t b)
+
+instance Traversable List where 
+traverse::
+Applicative f =>
+(a -> f b)
+-> List a 
+-> f (List b)
+traverse f = 
+foldRight (\a b -> (:.) <$> f a <*> b) (pure Nil)
+
+
+
+
+instance Traversable ExactlyOnce where 
+traverse::
+Applicative f=>
+(a -> f b)
+-> ExactlyOne a 
+-> f (ExactlyOne b)
+traverse f eoa = 
+ExactlyOne <*> f (runExactlyOcne eoa)
+
+sequenceA::
+(Applicative f, Traversable t) =>
+t(f a)
+-> f(t a)
+->....
+
+
+
+
+
+
+
+
+
